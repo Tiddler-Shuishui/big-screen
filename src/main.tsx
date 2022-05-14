@@ -1,10 +1,9 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import {render} from 'react-dom';
+import { createRoot } from 'react-dom/client';
 import './shared/style.scss';
 import App from './app';
 
-
-ReactDOM.render(
-  <App/>,
-  document.getElementById('root')
+createRoot(document.getElementById('root') as Element | DocumentFragment).render(
+  <App/>
 );
