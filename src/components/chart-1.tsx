@@ -1,9 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import * as echarts from 'echarts';
+import { createEchartsOptions } from '../shared/create-echarts-options';
 
-const px = (n: number) => {
-    return n / 2420 * (window as any).pageWidth
-  }
 export const Chart1 = () => {
     const divRef = useRef<HTMLDivElement | null>(null);
     useEffect(() => {
@@ -12,10 +10,7 @@ export const Chart1 = () => {
             var myChart = echarts.init(divRef.current as HTMLDivElement);
   
             // 指定图表的配置项和数据
-            var option = {
-              textStyle:{
-                color:'#79839e'
-              },
+            var option = createEchartsOptions({
               xAxis: {
                 data: ['兰州新区', '兰州新区', '兰州新区', '兰州新区', '兰州新区', '兰州新区', '兰州新区', '兰州新区', '兰州新区'],
                 axisLine:{
@@ -26,7 +21,6 @@ export const Chart1 = () => {
                 },
                 axisTick:{show: false},
                 axisLabel:{
-                  fontSize: px(12),
                   formatter(val: string) {
                     if(val.length > 2){
                       const array = val.split('')
@@ -44,17 +38,7 @@ export const Chart1 = () => {
                     color: '#0a1a3f'
                   }
                 },
-                splitLine:{show: false},
-                axisLabel:{
-                  fontSize: px(12)
-                }
-              },
-              grid:{
-                x: px(10),
-                y: px(10),
-                x2: px(10),
-                y2: px(10),
-                containLabel: true
+                splitLine:{show: false}
               },
               series: [
                 {
@@ -63,7 +47,7 @@ export const Chart1 = () => {
                   data: [5, 20, 36, 10, 10, 20, 56, 44, 55]
                 }
               ]
-            };
+            });
       
             // 使用刚指定的配置项和数据显示图表。
             myChart.setOption(option);
