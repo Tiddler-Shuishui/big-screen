@@ -17,51 +17,51 @@ export const Chart6 = () => {
       series: [
         {
           type: 'map',
-          mapType: 'CN', // 自定义扩展图表类型
+          map: 'CN', // 自定义扩展图表类型
           data: [
             {name: '甘肃省', value: 1},
           ],
           label: {show: false, color: 'white'},
+          emphasis: {
+            label: {color: 'white'},
+            areaColor: '#5470C6',
+          },
           itemStyle: {
             areaColor: '#010D3D',
             color: colors['甘肃省'],
             borderColor: '#01A7F7',
-            emphasis: {
-              label: {color: 'white'},
-              areaColor: '#5470C6',
-            },
           }
         },
         {
           type: 'map',
-          mapType: 'CN', // 自定义扩展图表类型
+          map: 'CN', // 自定义扩展图表类型
           data: [
             {name: '四川省', value: 100},
           ],
+          emphasis: {
+            label: {color: 'white'},
+            areaColor: '#5470C6',
+          },
           itemStyle: {
             areaColor: '#010D3D',
             color: colors['四川省'],
             borderColor: 'yellow',
-            emphasis: {
-              label: {color: 'white'},
-              areaColor: '#5470C6',
-            },
           }
         },
         {
           type: 'map',
-          mapType: 'CN', // 自定义扩展图表类型
+          map: 'CN', // 自定义扩展图表类型
           data: [
             {name: '青海省', value: 100},
           ],
+          emphasis: {
+            label: {color: 'white'},
+            areaColor: '#5470C6',
+          },
           itemStyle: {
             areaColor: '#010D3D',
             color: colors['青海省'],
             borderColor: '#01A7F7',
-            emphasis: {
-              label: {color: 'white'},
-              areaColor: '#5470C6',
-            },
           }
         },
 

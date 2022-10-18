@@ -6,11 +6,12 @@ import {px} from '../shared/px';
 export const Chart3 = () => {
   const divRef = useRef<HTMLDivElement | null>(null);
   useEffect(() => {
-    var myChart = echarts.init(divRef.current as HTMLDivElement);
+    const myChart = echarts.init(divRef.current as HTMLDivElement);
+
     myChart.setOption(createEchartsOptions({
       legend: {
         bottom: px(10),
-        textStyle: {color: 'white'},
+        textStyle: {color: 'white',fontSize:px(16) },
         itemWidth: px(30),
         itemHeight: px(16)
       },
@@ -18,7 +19,7 @@ export const Chart3 = () => {
         x: px(20),
         x2: px(20),
         y: px(20),
-        y2: px(70),
+        y2: px(100),
         containLabel: true
       },
       xAxis: {

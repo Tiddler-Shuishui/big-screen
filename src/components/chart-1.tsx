@@ -5,7 +5,6 @@ import { createEchartsOptions } from '../shared/create-echarts-options';
 export const Chart1 = () => {
     const divRef = useRef<HTMLDivElement | null>(null);
     useEffect(() => {
-      console.log(divRef);
             // 基于准备好的dom，初始化echarts实例
             var myChart = echarts.init(divRef.current as HTMLDivElement);
   
