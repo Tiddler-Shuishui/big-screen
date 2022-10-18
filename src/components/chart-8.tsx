@@ -20,7 +20,7 @@ export const Chart8 = () => {
           radius: ['75%', '90%'],
           avoidLabelOverlap: false,
           label: {
-            show: true, position: 'inside', textStyle: {color: 'white', fontSize: px(20)},
+            show: true, position: 'inside', color: 'white', fontSize: px(20),
             formatter(options: { value: number; }) {
               return (options.value * 100).toFixed(0) + '%';
             }
