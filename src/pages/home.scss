@@ -75,11 +75,14 @@
         }
         > .section4 {
             grid-area: box4;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
         }
         > .section5 {
             grid-area: box5;
         }
-        .statistics1,.statistics2,.statistics3,.statistics4,.statistics5,.statistics6{
+        .statistics1,.statistics2,.statistics3,.statistics4,.statistics5,.statistics6，statistics7{
             height: px(315);
             display: flex;
             flex-direction: column;
@@ -170,6 +173,18 @@
                   right: px(10);
                 }
               }
+          }
+          .statistics7 {display: flex;flex-direction: column;
+            height: px(363);
+            > .charts {
+              width: 100%;flex: 1; border: 1px solid red;
+              display: flex; padding: px(30);
+            }
+            &-1, &-2, &-3 {
+              flex: 1;
+              border: 1px solid red;
+              display: flex; flex-direction: column;
+            }
           }
     }
 }
